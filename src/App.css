@@ -48,3 +48,7 @@ table {
 }
 
 /* -- reset file */
+
+.dark-bars {
+  color: rgb(73, 73, 73);
+}

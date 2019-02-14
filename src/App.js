@@ -1,19 +1,16 @@
 import React, { Component } from 'react';
 import './App.css';
-import { HashRouter, Switch, Route } from 'react-router-dom';
-import Home from './components/Home.jsx';
-import About from './components/About.jsx';
+import Header from './components/Header.jsx';
+import routes from './routes';
 // define styles above the class component 
 
 class App extends Component {
   render() {
     return (
-      <HashRouter>
-        <Switch>
-          <Route exact path='/' component={ Home }/>
-          <Route path='/about' component={ About }/>
-        </Switch>
-      </HashRouter>
+      <div>
+        <Header />
+        { routes }
+      </div>
     );
   }
 }
