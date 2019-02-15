@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import jello from '../pictures/jello.jpg';
+import trassets from '../pictures/trassets.jpg';
 
 const BoxParent = styled.div`
   display: flex;
   justify-content: center;
+  height: 250px;
 `
 const ProjectBox = styled.div`
   display: flex;
@@ -18,7 +21,7 @@ const ProjectBox = styled.div`
   border-radius: 3px;
   box-shadow: 5px 10px 10px #DEE0E0;
 `
-const InnerBox = styled.div`
+const InnerBox = styled.img`
   align-self: center;
   width: 270px;
   height: 170px;
@@ -29,14 +32,24 @@ const ProjectTitle = styled.div`
 `
 
 class ProjectBoxes extends Component {
-  render() {
+
+  render() {      
+
     return (
-      <BoxParent>
-        <ProjectBox>
-          <InnerBox></InnerBox>
-          <ProjectTitle>Test Title</ProjectTitle>
-        </ProjectBox>
-      </BoxParent>
+      <div>
+        <BoxParent onClick={ () => this.props.showJello() }>
+          <ProjectBox>
+            <InnerBox src={ jello }></InnerBox>
+            <ProjectTitle>Jello Project Tracker</ProjectTitle>
+          </ProjectBox>
+        </BoxParent>
+        <BoxParent onClick={ () => this.props.showTrassets() }>
+          <ProjectBox>
+            <InnerBox src={ trassets }></InnerBox>
+            <ProjectTitle>Asset Tracker</ProjectTitle>
+          </ProjectBox>
+        </BoxParent>
+      </div>
     );
   }
 }

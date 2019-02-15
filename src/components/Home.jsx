@@ -4,7 +4,6 @@ import Intro from './Intro.jsx';
 import ProjectBoxes from './ProjectBoxes.jsx';
 
 const StyledHome = styled.div`
-  height: 100vh;
   background-color: #E7E9E9;
 `
 const LatestWork = styled.div`
@@ -15,12 +14,21 @@ const LatestWork = styled.div`
 `
 
 class Home extends Component {
+
+  state = {
+    showJello: false,
+    showTrassets: false
+  }
+
+  showJello = () => { this.setState({ showJello: true }) }
+  showTrassets = () => { this.setState({ showTrassets: true }) }
+  
   render() {
     return (
       <StyledHome>
         <Intro />
         <LatestWork><div>Some of my latest work</div></LatestWork>
-        <ProjectBoxes />
+        <ProjectBoxes showJello={ this.showJello } showTrassets={ this.showTrassets }/>
       </StyledHome>
     );
   }
