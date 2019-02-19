@@ -7,6 +7,12 @@ import nodejs2 from '../pictures/nodejs2.jpg';
 import postgres from '../pictures/postgres.jpg';
 import react from '../pictures/react.jpg';
 
+
+const Container = styled.div`
+  background-color: white;
+  background-image: -webkit-linear-gradient(50deg, #52afff 50%, white 50%);
+  min-height: 100px;
+`
 const SkillsParent = styled.div`
   display: flex;
   justify-content: center;
@@ -30,14 +36,14 @@ const SkillWrapper = styled.div`
   width: 100%;
   padding-left: 20px;
   align-items: center;
-  :hover {
-    background-color: #E7E9E9;
-  }
 `
 const Skill = styled.img`
   margin: 10px;
   width: 100px;
   height: 100px;
+  padding: 7px;
+  background-color: white;
+  border: 1px solid black;
 `
 const SkillSubtitle = styled.p`
   font-size: 20px;
@@ -47,35 +53,37 @@ const SkillSubtitle = styled.p`
 class Skills extends Component {
   render() {
     return (
-      <SkillsParent>
-        <SubTitle>Skills</SubTitle>
-        <SkillsBox>
-          <SkillWrapper>
-            <Skill src={ js } alt="js"></Skill>
-            <SkillSubtitle>JavaScript</SkillSubtitle>
-          </SkillWrapper>
-          <SkillWrapper>
-            <Skill src={ react } alt="react"></Skill>
-            <SkillSubtitle>React</SkillSubtitle>
-          </SkillWrapper>
-          <SkillWrapper>
-            <Skill src={ nodejs2 } alt="nodejs"></Skill>
-            <SkillSubtitle>NodeJS</SkillSubtitle>
-          </SkillWrapper>
-          <SkillWrapper>
-            <Skill src={ postgres } alt="postgres"></Skill>
-            <SkillSubtitle>PostgreSQL</SkillSubtitle>
-          </SkillWrapper>
-          <SkillWrapper>
-            <Skill src={ html } alt="html"></Skill>
-            <SkillSubtitle>HTML</SkillSubtitle>
-          </SkillWrapper>
-          <SkillWrapper>
-            <Skill src={ css } alt="css"></Skill>
-            <SkillSubtitle>CSS</SkillSubtitle>
-          </SkillWrapper>
-        </SkillsBox>
-      </SkillsParent>
+      <Container>
+        <SkillsParent>
+          <SubTitle>Skills</SubTitle>
+          <SkillsBox>
+            <SkillWrapper>
+              <Skill src={ js } alt="js"></Skill>
+              <SkillSubtitle>JavaScript</SkillSubtitle>
+            </SkillWrapper>
+            <SkillWrapper>
+              <Skill src={ react } alt="react"></Skill>
+              <SkillSubtitle>React</SkillSubtitle>
+            </SkillWrapper>
+            <SkillWrapper>
+              <Skill src={ nodejs2 } alt="nodejs"></Skill>
+              <SkillSubtitle>NodeJS</SkillSubtitle>
+            </SkillWrapper>
+            <SkillWrapper>
+              <Skill src={ postgres } alt="postgres"></Skill>
+              <SkillSubtitle>PostgreSQL</SkillSubtitle>
+            </SkillWrapper>
+            <SkillWrapper>
+              <Skill src={ html } alt="html"></Skill>
+              <SkillSubtitle>HTML</SkillSubtitle>
+            </SkillWrapper>
+            <SkillWrapper>
+              <Skill src={ css } alt="css"></Skill>
+              <SkillSubtitle>CSS</SkillSubtitle>
+            </SkillWrapper>
+          </SkillsBox>
+        </SkillsParent>
+      </Container>
     );
   }
 }

@@ -6,7 +6,6 @@ import Trassets from './Trassets';
 
 const StyledProjects = styled.div`
   height: 100vh;
-  background-color: #E7E9E9;
 `
 
 class Projects extends Component {

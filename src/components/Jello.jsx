@@ -1,15 +1,17 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import detail from '../pictures/detail.jpg';
 
 const BackBtn = styled.div`
   padding: 8px;
+  color: grey;
 `
 const Title = styled.h1`
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin: 10px;
   font-size: 30px;
-  padding: 0 25px 0 25px;
+  padding: 0 25px 10px 25px;
   color: rgb(73, 73, 73);
+  border-bottom: 1px solid #eaeaea;
 `
 const Description = styled.p`
   margin: 10px 0 10px 0;
@@ -35,6 +37,11 @@ const Buttons = styled.a`
     text-decoration: none;
   }
 `
+const Image = styled.img`
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+`
 
 class Jello extends Component {
   render() {
@@ -47,8 +54,9 @@ class Jello extends Component {
           <Buttons href='https://github.com/mobydickens/personal_project'>Github repo</Buttons>
         </ButtonParent>
         <Description>
-          Personally developed a web application to to assist developers in planning projects managing their time effectively.
+          Personally developed a responsive web application to to assist developers in planning projects managing their time effectively.
         </Description>
+        <Image src={detail}></Image>
         <Description>Tech stack: React, Javascript, PostgreSQL, HTML5, NodeJS, Massive (SQL), Express, Plotly.js, Tailwind, Moment, Jest, Socket.io, and bcrypt</Description>
         <ul>
           <List>Allows users to break projects down into tasks</List>
