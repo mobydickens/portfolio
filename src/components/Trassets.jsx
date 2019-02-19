@@ -22,11 +22,18 @@ const List = styled.li`
 `
 const ButtonParent = styled.div`
   display: flex;
+  margin-left: 20px;
 `
 const Buttons = styled.a`
-  border-radius: 3px;
+  font-size: 12px;
+  margin: 5px;
+  border-radius: 5px;
+  padding: 4px;
   background-color: #2D89E5;
   color: white;
+  :link, :visited, :active {
+    text-decoration: none;
+  }
 `
 
 class Trassets extends Component {
